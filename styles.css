@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    --Very-dark-blue-mainBG: hsl(217, 54%, 11%);
+    --Very-dark-blue-cardBG: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.1rem;
+    font-family: 'Outfit', sans-serif;
+    background-color:var(--Very-dark-blue-mainBG);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 370px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color:var(--Very-dark-blue-cardBG);
+    padding: 20px;
+    margin: 2rem 1rem;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px 5px rgba(0,0,0,0.75);
+}
+
+.image img {
+    width: 100%;
+    display: block;
+}
+
+.image {
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.eye {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--Cyan);
+    display: none;
+}
+
+.image:hover .eye {
+    display: block;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.eye img {
+    position: absolute;
+    width: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.text a {
+    text-decoration: none;
+    color: var(--White);
+    padding: 1.2rem 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.text a:hover {
+    color: var(--Cyan);
+}
+
+.text p {
+    color: var(--soft-blue);
+    font-weight: 400;
+}
+
+.price-days {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+
+.days, .price {
+    display: flex;
+    align-items: center;
+}
+
+.price p {
+    padding-left: 0.5rem;
+    color: var(--Cyan);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+
+.days p {
+    padding-left: 0.5rem;
+    color: var(--soft-blue);
+    font-size: 1rem;
+   
+}
+
+hr {
+    border-color: var(--Very-dark-blue-line);
+}
+
+.creator {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem ;
+}
+
+.creator img {
+    width: 12%;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+}
+
+.creator p {
+    padding-left: 1rem;
+    color: var(--soft-blue);
+    font-size: 1rem;
+}
+
+.creator a {
+    text-decoration: none;
+    color: var(--White);
+    font-size: 1rem;
+}
+
+.creator a:hover {
+    color: var(--Cyan);
+}
